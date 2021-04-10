@@ -9,7 +9,8 @@
     "heroku:log": "heroku logs --tail",
     "build:ui": "rm -rf build && cd ../pwa-birdifier && npm run build --prod && cp -r build ../pwa-birdifier-backend/",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push heroku main && npm run deploy"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push heroku main && npm run deploy",
+    "lint": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^7.24.0",
     "nodemon": "^2.0.7"
   }
 }
